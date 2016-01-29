@@ -11,26 +11,30 @@ return [
         ],
     ],
     'edit_fields' => [
+        'project' => [
+            'type'=>'relationship',
+            'name_field'=>'title',
+        ],
         'active' => [
             'type'=>'bool'
         ],
+        'weight' => [
+            'type'=>'number'
+        ],
+        'alt' => [
+            'type'=>'text'
+        ],
         'title' => [
-            'type'=>'text'
-        ],
-        'slug' => [
-            'type'=>'text'
-        ],
-        'content' => [
-            'type'=>'wysiwyg',
+            'type'=>'text',
         ],
         'image' => [
             'type'=>'image',
-            'location'=> public_path().'/uploads/project/original/',
+            'location'=> public_path().'/uploads/images/original/',
             'sizes'=> [
-                [500,500,'auto', public_path().'/uploads/project/medium/',100],
-                [1000,800,'auto', public_path().'/uploads/project/large/',100],
+                [100,100,'auto', public_path().'/uploads/images/small/',100],
+                [500,500,'auto', public_path().'/uploads/images/medium/',100],
+                [1000,800,'auto', public_path().'/uploads/images/large/',100],
             ],
         ],
     ],
-    'form_wigth' => 800,
 ];
