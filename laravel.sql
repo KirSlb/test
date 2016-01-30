@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 30 2016 г., 15:46
+-- Время создания: Янв 30 2016 г., 21:07
 -- Версия сервера: 5.6.26
 -- Версия PHP: 5.6.12
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `laravel`
+-- База данных: `test`
 --
 
 -- --------------------------------------------------------
@@ -37,14 +37,19 @@ CREATE TABLE IF NOT EXISTS `galleries` (
   `created_at` timestamp NOT NULL,
   `updated_at` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `galleries`
 --
 
 INSERT INTO `galleries` (`id`, `project_id`, `active`, `weight`, `image`, `alt`, `title`, `created_at`, `updated_at`) VALUES
-(1, 2, 1, 1, 'hba1qO4DJLIJsqoQSxZ06GDiomtkGs8X.jpg', 'image', 'title', '2016-01-29 13:02:36', '2016-01-29 13:02:36');
+(1, 2, 1, 4, 'hba1qO4DJLIJsqoQSxZ06GDiomtkGs8X.jpg', 'image', 'title', '2016-01-29 13:02:36', '2016-01-30 09:59:34'),
+(2, 2, 1, 3, 'yG9U5VDAo4CyoQbFizOXBnp5JOyQNLyF.jpg', 'alt', 'title', '2016-01-30 10:00:45', '2016-01-30 10:00:45'),
+(3, 2, 1, 2, 'QrHoROl4eyZGV2otZEGQChitL5JfyVsC.jpg', 'alt', 'title', '2016-01-30 10:01:29', '2016-01-30 10:01:29'),
+(4, 2, 1, 4, 'Ita2UnJIt7C5wiaXyghq6vgfE1sIJISG.jpg', 'alt', 'title', '2016-01-30 10:02:12', '2016-01-30 10:02:12'),
+(5, 1, 1, 1, '4YRTH4vZDuXmJrsw1CPKJggZkK7CRK7w.jpg', 'alt', 'title', '2016-01-30 10:04:01', '2016-01-30 10:04:01'),
+(6, 1, 0, 2, '4FvKfm4K3GKsnF6BH4C6A1o5MopDH2Wk.jpg', 'alt', 'title', '2016-01-30 10:04:44', '2016-01-30 10:04:44');
 
 -- --------------------------------------------------------
 
