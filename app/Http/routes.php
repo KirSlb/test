@@ -26,5 +26,7 @@
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/',['as'=>'main','uses'=>'IndexController@index']);
+    Route::get('projects',['as'=>'projectList','uses'=>'IndexController@projectList']);
+    Route::get('projects/{slug}',['as'=>'projectCart','uses'=>'IndexController@projectCart']);
 
 });
