@@ -7,7 +7,7 @@ return [
         'id',
         'active',
         'image' => [
-            'output' => '<img src"/uploads/images/small/(:value)" />',
+            'output' => '<img src="/uploads/images/small/(:value)" />',
         ],
     ],
     'edit_fields' => [

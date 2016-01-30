@@ -14,6 +14,7 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function(Blueprint $table) {
             $table->increments('id');
+            $table->boolean('active');
             $table->string('title');
             $table->string('slug');
             $table->string('image');

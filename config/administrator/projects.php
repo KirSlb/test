@@ -30,5 +30,5 @@ return [
             ],
         ],
     ],
-    'form_wigth' => 800,
+    'form_width' => 800,
 ];
