@@ -71,6 +71,7 @@ return array(
 		'slides',
 		'projects',
 		'galleries',
+		'Settings' => ['settings.about'],
 	),
 
 	/**

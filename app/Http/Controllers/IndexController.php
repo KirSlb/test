@@ -22,4 +22,9 @@ class IndexController extends MainController
         $this->data['project'] = $project->getBySlug($slug);
         return view('pages.project_cart',$this->data);
     }
+    public function about()
+    {
+        $this->data['about']=json_decode(file_get_contents(storage_path().'/administrator_settings/about.json'));
+        return view('pages.about',$this->data);
+    }
 }
