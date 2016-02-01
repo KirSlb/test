@@ -11,8 +11,13 @@ class Blog extends Model
     public function getActive()
     {
         return $this->published()->latest()
-            ->paginate(3);
+            ->paginate(2);
     }
+    public function getBySlug($slug)
+    {
+        return $this->where(['slug'=>$slug])->firstOrFail();
+    }
+
 
     public function scopePublished($query)
     {

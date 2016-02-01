@@ -9,8 +9,9 @@ class BlogController extends MainController {
 
         return view('blog.index', $this->data);
     }
-    public function cart()
+    public function cart($slug, Blog $blog)
     {
-
+        $this->data['record'] = $blog->getBySlug($slug);
+        return view('blog.cart',$this->data);
     }
 }
