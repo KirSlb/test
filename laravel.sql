@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 01 2016 г., 09:52
+-- Время создания: Фев 01 2016 г., 12:19
 -- Версия сервера: 5.6.26
 -- Версия PHP: 5.6.12
 
@@ -133,7 +133,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_01_26_164554_create_sliders_table', 3),
 ('2016_01_27_164639_create_projects_table', 4),
 ('2016_01_27_165717_create_galleries_table', 4),
-('2016_01_31_161952_create_blogs_table', 5);
+('2016_01_31_161952_create_blogs_table', 5),
+('2016_02_01_084706_create_presses_table', 6);
 
 -- --------------------------------------------------------
 
@@ -148,6 +149,32 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   KEY `password_resets_email_index` (`email`),
   KEY `password_resets_token_index` (`token`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `presses`
+--
+
+CREATE TABLE IF NOT EXISTS `presses` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `active` tinyint(1) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `body` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `published_at` timestamp NOT NULL,
+  `created_at` timestamp NOT NULL,
+  `updated_at` timestamp NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `presses`
+--
+
+INSERT INTO `presses` (`id`, `active`, `title`, `slug`, `image`, `body`, `published_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Запись 1', 'record1', '9rmtdoCTAvt1HFxGHevJ18u0ZRoSONVe.jpg', '<p>sdfsdfsdfsd sdfsdfs dsffs</p>\n', '0000-00-00 00:00:00', '2016-02-01 04:18:10', '2016-02-01 04:19:18');
 
 -- --------------------------------------------------------
 
