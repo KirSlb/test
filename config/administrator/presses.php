@@ -29,9 +29,9 @@ return [
                 [100,100,'auto', public_path().'/uploads/press/small/',100],
             ],
         ],
-        /*'published_at' => [
+        'published_at' => [
             'type' => 'date',
-        ],*/
+        ],
     ],
     'form_width' => 800,
 ];
